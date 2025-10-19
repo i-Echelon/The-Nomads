@@ -65,22 +65,17 @@ public abstract class BaseFleetEffectHullMod extends BaseHullMod {
      * This ensures that old references never persist between campaigns.
      */
     public static class CacheCleanupPlugin extends BaseModPlugin {
-        @Override
         public void onGameLoad(boolean newGame) {
             clearMemo();
         }
-
-        @Override
         public void onApplicationLoad() {
             clearMemo();
         }
 
-        @Override
         public void onNewGameAfterEconomyLoad() {
             clearMemo();
         }
 
-        @Override
         public void onGameQuit() {
             clearMemo();
         }
